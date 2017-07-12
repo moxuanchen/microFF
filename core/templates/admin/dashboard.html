@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DashBoard</title>
+    <link rel="stylesheet" type="text/css" href="/static/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div>
+    <p class="text-left"><label>总计：{{ count }}</label></p>
+</div>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>邮件</td>
+        <th>密码</td>
+        <th>Remember Me?</td>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user['email'] }}</td>
+        <td>{{ user['password'] }}</td>
+        <td>{{ user['remember_me'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
